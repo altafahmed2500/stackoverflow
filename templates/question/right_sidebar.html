@@ -1,0 +1,50 @@
+
+    <div id="sidebar" role="complementary" aria-label="sidebar">
+
+
+        <div class="module js-gps-related-tags" id="related-tags">
+                <h4 id="h-related-tags">Related Tags</h4>
+
+    {% for t in tag %}
+    <div data-name="javascript">
+        <a href="#" class="post-tag no-tag-menu"  rel="tag">{{ t }}</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count"> {{ t.q_count }}</span> </span>
+    </div>
+    
+    {% endfor %}
+
+
+    <a href="#"
+       class="show-more js-show-more js-gps-track"
+       data-gps-track="related_tags.click({ item_type:2 })">
+        more related tags
+    </a>
+
+        </div>
+
+    <div id="hot-network-questions" class="module tex2jax_ignore">
+
+<h4>
+    <a href="https://stackexchange.com/questions?tab=hot"
+       class="js-gps-track s-link s-link__inherit" 
+       data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+        Hot Network Questions
+    </a>
+</h4>
+<ul>
+        <li >
+            <div class="favicon favicon-chinese" title="Chinese Language Stack Exchange"></div><a href="https://chinese.stackexchange.com/questions/45206/what-does-%e9%ab%98%e9%ab%98%e7%9f%ae%e7%9f%ae-mean" class="js-gps-track question-hyperlink mb0" data-gps-track="site.switch({ item_type:9, target_site:371 }); posts_hot_network.click({ item_type:2, location:9 })">
+                What does &#x9AD8;&#x9AD8;&#x77EE;&#x77EE; mean?
+            </a>
+
+        </li>
+</ul>
+
+
+    <a href="#" 
+       class="show-more js-show-more js-gps-track" 
+       data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+        more hot questions
+    </a>
+</div>
+
+</div>

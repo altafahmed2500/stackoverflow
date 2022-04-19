@@ -1,0 +1,71 @@
+{% load static %}
+{% load humanize %}
+<html class="html__responsive  html__fixed-top-bar">
+
+    <head>
+
+        <title>Newest Questions - Stack Overflow</title>
+        <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico?v=ec617d715196">
+        <link rel="apple-touch-icon" href="https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a">
+        <link rel="image_src" href="https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a"> 
+        <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="/opensearch.xml">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+        <meta property="og:type" content= "website" />
+        <meta property="og:url" content="https://stackoverflow.com/questions"/>
+        <meta property="og:site_name" content="Stack Overflow" />
+        <meta property="og:image" itemprop="image primaryImageOfPage" content="https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded" />
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:domain" content="stackoverflow.com"/>
+        <meta name="twitter:title" property="og:title" itemprop="name" content="Newest Questions" />
+        <meta name="twitter:description" property="og:description" itemprop="description" content="Stack Overflow | The World&#x2019;s Largest Online Community for Developers" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdn.sstatic.net/Js/stub.en.js?v=b6b81fff6fef"></script>
+    
+    
+        <link rel="stylesheet" type="text/css" href="{% static 'css/web/css01.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/web/css02.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/web/css03.css' %}">
+        <link rel="stylesheet" href="{% static 'css/web/css05.css' %}">
+    
+        <script src="{% static 'js/web/webjq.js'%}"></script>
+
+        
+        
+        
+        <link rel="stylesheet" type="text/css" href="{% static 'css/web/css04.css' %}">
+        
+
+    <noscript id="noscript-css"><style>body,.top-bar{margin-top:1.9em}</style></noscript>
+    </head>
+    <body class="questions-page unified-theme">
+    <div id="notify-container"></div>
+    <div id="custom-header"></div>
+
+{% include 'main_base/header.html' %}
+<script>
+    StackExchange.ready(function () { StackExchange.topbar.init(); });
+StackExchange.scrollPadding.setPaddingTop(50, 10);    </script>
+
+<div class="container">
+{% include 'question/left_sidebar.html' %}
+
+{% block body %}
+
+{% endblock %}
+{% include 'question/right_sidebar.html' %}
+
+</div>
+</div>
+{% include 'main_base/footer.html' %}
+{% block custom_js %} {% endblock %}
+        
+<div id="onetrust-consent-sdk" class="d-none"></div>
+<div id="onetrust-banner-sdk" data-controller="s-modal"></div>
+<div id="ot-pc-content" class="d-none"></div>
+<div id="onetrust-style" class="d-none">&nbsp;</div>
+<div class="d-none js-consent-banner-version" data-consent-banner-version="baseline"></div>
+
+
+</body>
+</html>
